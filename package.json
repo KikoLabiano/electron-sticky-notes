@@ -1,0 +1,23 @@
+{
+  "name": "electron-sticky-notes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "electron": "^3.0.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KikoLabiano/electron-sticky-notes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KikoLabiano/electron-sticky-notes/issues"
+  },
+  "homepage": "https://github.com/KikoLabiano/electron-sticky-notes#readme"
+}
