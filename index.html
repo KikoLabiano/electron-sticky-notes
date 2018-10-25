@@ -1,20 +1,31 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="css/sticky-notes.css"/>
-    <title>Sticky note</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="css/sticky-notes.css" />
+  <title>Sticky note</title>
 </head>
 
 <body>
-    <div class="sticky-note">
-        <textarea name="taNote" id="" item-width="300" item-height="250" cols="30" rows="10" class="ta-sticky-note"></textarea>
-    </div>
-    <div>
-        <input type="button" value="Nueva nota" onclick="stickyNotes.createStickyNote();"/>
-    </div>
+  <div class="sticky-note-top-border">
+    <img id="sticky-delete" class="sticky-button sticky-button-left" src="css/img/sticky-delete.png" data-tippy="Delete" />
+    <img id="sticky-add" class="sticky-button sticky-button-right" src="css/img/sticky-add.png" data-tippy="New Sticky note" />
+    <img id="sticky-minimize" class="sticky-button sticky-button-right" src="css/img/sticky-minimize.png" data-tippy="Minimize" />
+    <img id="sticky-save" class="sticky-button sticky-button-right" src="css/img/sticky-save.png" data-tippy="Save" />
+    <img id="sticky-print" class="sticky-button sticky-button-right" src="css/img/sticky-print.png" data-tippy="Print" />
+  </div>
+  <div class="sticky-note">
+    <textarea name="taStickyNote" id="" item-width="100%" item-height="100%" class="ta-sticky-note" placeholder="Write your note..."></textarea>
+  </div>
 
-    <script src="./js/sticky-notes.js" type="text/javascript"></script>
+  <div class="sticky-note-footer">
+    <span class="sticky-bold sticky-span">B</span>
+    <span class="sticky-italic sticky-span">I</span>
+    <span class="sticky-underline sticky-span">U</span>
+  </div>
+  <script src="./js/sticky-notes-api.js" type="text/javascript"></script>
+  <script src="./js/sticky-notes.js" type="text/javascript"></script>
 </body>
 
 </html>

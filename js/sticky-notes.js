@@ -1,18 +1,25 @@
-const electron = require('electron');
+const $ = require('jquery');
+const tippy = require('tippy.js');
 
-//Electron no permite utilizar directamente el constructor BrowserWindow para crear múltiples ventanas
-//Hay que hacerlo a través del módule remote
-//Más info: https://stackoverflow.com/questions/45639628/how-to-fix-browserwindow-is-not-a-constructor-error-when-creating-child-window-i
-const BrowserWindow = electron.remote.BrowserWindow;
+$(function() {
 
-var stickyNotes = (function(){
+  tippy.setDefaults({
+    arrow: true,
+    arrowType: 'sharp',
+    delay: 40,
+    theme: 'my-tippy'
+  });
 
-    var publicAPI = {
-        createStickyNote: ()=> {
-            var stickyWin = new BrowserWindow({ width: 300, height: 250, frame: false, resizable: false });
-            stickyWin.loadFile('index.html')
-        }
-    }
-
-    return publicAPI;
-})();
+  $("#sticky-add").on("click", () => {
+    stickyNotes.createStickyNote();
+  });
+  $("#sticky-minimize").on("click", () => {
+    stickyNotes.minimizeStickyNote();
+  });
+  $("#sticky-delete").on("click", () => {
+    stickyNotes.deleteStickyNote();
+  });
+  $("#sticky-save").on("click", () => {
+    stickyNotes.saveStickyNote();
+  });
+});

@@ -1,13 +1,86 @@
-.sticky-note{
-    background-color: #FFFFA5;
-    border: 1px solid black;
-    opacity: 0.6;
-    width: 100%;
-    height: 100%;
+/*@font-face {
+  font-family: Postit-Penscript;
+  src: url("fonts/Postit-Penscript.woff") format("woff");
+}*/
+body {
+  background-color: #FFFFA5;
 }
 
-.ta-sticky-note{
-    background-color: #FFFFA5;
-    border: none;     
-    resize: none;
+.sticky-note-top-border {
+  height: 35px;
+  background: rgba(151, 155, 189, 0.3);
+  -webkit-app-region: drag;
+  -webkit-user-select: none;
+}
+
+.sticky-note {
+  background-color: #FFFFA5;
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.ta-sticky-note {
+  background: none;
+  border: none;
+  resize: none;
+  font-family: Helvetica;
+  outline: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  width: 90vw;
+  height: 75vh;
+  /*font-weight: bold;
+  font-size: 2em;*/
+}
+
+.ta-sticky-note:focus {
+  background: none;
+}
+
+.sticky-note-footer {
+  border-top: 1px solid grey;
+  height: 10vh;
+}
+
+.sticky-span {
+  padding-left: 10px;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+/*.sticky-span:hover {
+  background-color: #ffba59;
+  border: 1px solid grey;
+  width:20px;
+  height: 20px;
+}*/
+
+.sticky-bold {
+  font-weight: bold;
+}
+
+.sticky-italic {
+  font-style: italic;
+}
+
+.sticky-underline {
+  text-decoration: underline;
+}
+
+/* Buttons */
+.sticky-button {
+  padding: 5px;
+  -webkit-app-region: no-drag;
+  cursor: pointer;
+}
+
+.sticky-button-left {
+  float: left;
+}
+
+.sticky-button-right {
+  float: right;
+  margin-right: 10px;
 }
