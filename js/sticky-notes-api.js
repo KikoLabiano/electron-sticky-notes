@@ -1,4 +1,5 @@
 const electron = require('electron');
+const fs = require('fs-jetpack');
 
 //Electron no permite utilizar directamente el constructor BrowserWindow para crear múltiples ventanas
 //Hay que hacerlo a través del módule remote
@@ -9,7 +10,7 @@ var stickyNotes = (function() {
 
   var publicAPI = {
     createStickyNote: () => {
-      var stickyWin = new BrowserWindow({
+      let stickyWin = new BrowserWindow({
         width: 400,
         height: 400,
         frame: false
@@ -27,8 +28,11 @@ var stickyNotes = (function() {
       let w = electron.remote.getCurrentWindow();
       w.minimize();
     },
-    saveStickyNote: ()=>{
-      console.log(electron.remote.app.getPath("appData"));
+    saveStickyNote: (text)=>{
+      //Create dir
+      fs.dir(electron.remote.app.getPath("appData") + "\\sticky-notes\\");
+      //Write in file
+      fs.write(electron.remote.app.getPath("appData") + "\\sticky-notes\\sticky" + electron.remote.getCurrentWindow().id + ".txt",text);
     }
   }
 

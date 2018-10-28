@@ -46,16 +46,18 @@ body {
 
 .sticky-span {
   padding-left: 10px;
+  padding-right: 10px;
   font-size: 1.5em;
   cursor: pointer;
 }
 
-/*.sticky-span:hover {
-  background-color: #ffba59;
-  border: 1px solid grey;
-  width:20px;
-  height: 20px;
-}*/
+.sticky-span:hover {
+  background-color: #EDE19F;
+}
+
+.sticky-span-active {
+  background-color: #EDE19F;
+}
 
 .sticky-bold {
   font-weight: bold;

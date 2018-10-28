@@ -20,6 +20,10 @@ $(function() {
     stickyNotes.deleteStickyNote();
   });
   $("#sticky-save").on("click", () => {
-    stickyNotes.saveStickyNote();
+    stickyNotes.saveStickyNote($("#taStickyNote").val());
   });
+  $(".sticky-bold").on("click",()=>{
+    console.log(document.getSelection());
+    window.execCommand('bold');
+  })
 });
